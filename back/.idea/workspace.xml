@@ -20,7 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="860f5772-21f4-4648-8c85-e9c791f5f346" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../front" beforeDir="false" afterPath="$PROJECT_DIR$/../front" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/834ee28c-342f-4ddb-94c4-4cd4238cb3db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/834ee28c-342f-4ddb-94c4-4cd4238cb3db.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/global.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/repository/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/login/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/login/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/ajax.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/ajax.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/api/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/pages/admin/admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/pages/admin/admin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front/src/pages/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../front/src/pages/login/login.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +110,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1642416597982" />
+    <state width="845" height="163" key="GridCell.Tab.0.bottom" timestamp="1644067213707">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1644067213707" />
+    <state width="845" height="163" key="GridCell.Tab.0.center" timestamp="1644067213707">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1644067213707" />
+    <state width="845" height="163" key="GridCell.Tab.0.left" timestamp="1644067213707">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1644067213707" />
+    <state width="845" height="163" key="GridCell.Tab.0.right" timestamp="1644067213707">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="845" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1644067213707" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1642416019087">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -111,9 +142,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="425" y="158" width="431" height="360" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1280.680@0.0.1280.680" timestamp="1643266902174" />
-    <state x="500" y="79" width="689" height="523" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1642416756921">
+    <state x="500" y="79" width="689" height="523" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1644064412456">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="500" y="79" width="689" height="523" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1642416756921" />
+    <state x="500" y="79" width="689" height="523" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1280.680@0.0.1280.680" timestamp="1644064412456" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1643438388463">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1643438388463" />
   </component>
 </project>

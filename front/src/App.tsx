@@ -13,7 +13,7 @@ function App({}: AppProps) {
     <HashRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Admin />} />
+        <Route path="/*" element={<Admin />} />
       </Routes>
     </HashRouter> 
   );

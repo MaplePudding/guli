@@ -4,26 +4,28 @@ import (
 	"back/global"
 	"back/repository"
 	"back/service/auth"
+	"back/service/category"
 	"back/service/login"
-	"fmt"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"log"
 	"time"
 )
 
-func UserRepoRegister(){
+func registeRepository(){
+	db := repository.NewDb()
 	userRepo := new(repository.UserRepo)
-	userRepo.Db = repository.NewUserDb()
+	categoryRepo := new(repository.CategoryRepo)
+	userRepo.Db = db
+	categoryRepo.Db = db
 	global.GUserRepo = userRepo
-	fmt.Sprintf("registe user repo")
+	global.GCategoryRepo = categoryRepo
 }
 
 func main(){
 	app := gin.Default()
 
-	// registe userRepo globally
-	UserRepoRegister()
+	// registe all repo globally
+	registeRepository()
 
 	app.Use(cors.New(cors.Config{
 		AllowOrigins:     []string{"http://127.0.0.1:3000", "http://localhost:3000"},
@@ -45,10 +47,10 @@ func main(){
 
 	authGroup := app.Group("/auth")
 	{
-		log.Printf("%v", authGroup)
+		authGroup.GET("/manage/category/list", category.RCategoriesHandler)
+		authGroup.POST("/manage/category/add", category.RAddCategoryHandler)
+		authGroup.POST("/manage/category/update", category.RUpdateCategoryHandler)
 	}
 
-
 	app.Run(":8080")
-
 }

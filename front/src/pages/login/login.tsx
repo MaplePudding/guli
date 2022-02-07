@@ -3,8 +3,9 @@ import { Form, Input, Button} from '@douyinfe/semi-ui';
 import aes from 'crypto-js/aes'
 import CryptoJS from 'crypto-js'
 import logo from '/img/logo.png'
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom'
 import { apiAddUser, apiAuth, apiLogin } from '../../api';
+import { setLocalStorage } from '../../utils/memory';
 
 interface LoginProps{
     
@@ -13,6 +14,7 @@ interface LoginProps{
 const Login : React.FC<LoginProps> = function(props : LoginProps){
   const [userName, setName] = useState("admin")
   const [pwd, setPwd] = useState("admin")
+  const navigate = useNavigate()
 
   function onNameChange(val:string, e:ChangeEvent<HTMLInputElement>){
     setName(val)
@@ -29,7 +31,14 @@ const Login : React.FC<LoginProps> = function(props : LoginProps){
   }
 
   function submit(e:React.MouseEvent){
-    apiLogin({userName, pwd:aesCbcEncrypt(pwd)})
+    apiLogin({userName, pwd:aesCbcEncrypt(pwd)}).then((res) => {
+      //@ts-ignore
+      if(res.data && res.data.code === 1){
+        //@ts-ignore
+        setLocalStorage("userName", res.data.data.userName)
+        navigate("/")
+      }
+    })
   }
 
     return(

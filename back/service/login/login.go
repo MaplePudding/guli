@@ -62,11 +62,15 @@ var RLoginHandler gin.HandlerFunc = func(c *gin.Context) {
 			HttpOnly: false,
 		})
 		c.JSON(http.StatusOK, gin.H{
-			"value": 1,
+			"code": 1,
+			"data":gin.H{
+				"userName": userName,
+			},
 		})
 	}else{
 		c.JSON(http.StatusOK, gin.H{
-			"value": -1,
+			"code": -1,
+			"data":gin.H{},
 		})
 	}
 }
