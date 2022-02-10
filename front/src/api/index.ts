@@ -37,3 +37,16 @@ export function apiAddCategory(data:Categories){
 export function apiUpdateCategory(data:Categories){
   return ajax("/auth/manage/category/update", data, "POST")
 }
+
+export function apiProducts(data:{pageNum:number, pageSize:number}){
+  return ajax("/auth/manage/product/list", data, "GET")
+}
+
+export function apiProductsCondition(data:{pageNum:number, pageSize:number, condition:string, flag:"0"|"1"}){
+  return ajax("/auth/manage/product/search", data, "GET")
+}
+
+export function apiProductStatus(data:any){
+  return ajax("/auth/manage/productStatus/status", data, "POST")
+}
+

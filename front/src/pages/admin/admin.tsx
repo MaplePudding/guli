@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState} from 'react';
 import { useNavigate, Routes, Route, Navigate, BrowserRouter, HashRouter, useLocation } from 'react-router-dom';
 import { Nav, Popconfirm, Button, Toast } from '@douyinfe/semi-ui';
 import {IconHome, IconCart, IconUser, IconUserSetting} from '@douyinfe/semi-icons';
@@ -21,6 +21,8 @@ interface AdminProps{
 
 const Admin : React.FC<AdminProps> = function(props : AdminProps){
   const navigate = useNavigate()
+  const [selectedKeys, setSelectedKeys] = useState(["home"]);
+  const [openKeys, setOpenKeys] = useState(["commodity"])
 
   useEffect(() => {
     apiAuth().then((res) =>{
@@ -45,13 +47,16 @@ const Admin : React.FC<AdminProps> = function(props : AdminProps){
     Toast.warning('取消退出！')
   };
 
-    // @ts-ignore
+
   return(
-        <div className="w-screen min-h-screen flex flex-row justify-start items-stretch">
+        <div className="min-h-screen flex flex-row justify-start items-stretch">
           <Nav defaultSelectedKeys={['home']}
+               openKeys={openKeys}
                onSelect={data => console.log('trigger onSelect: ', data)}
-               onClick={data => console.log('trigger onClick: ', data)}
+               onClick={data => setSelectedKeys([data.itemKey])}
                items={menuList}
+               selectedKeys={selectedKeys}
+               onOpenChange={(data) => setOpenKeys(data.openKeys)}
           >
             <Nav.Header logo={<img src={logo}/>} text={'后台管理'}/>
           </Nav>
@@ -76,7 +81,7 @@ const Admin : React.FC<AdminProps> = function(props : AdminProps){
               <Routes>
                 <Route path="/home" element={<Home />}/>
                 <Route path="/category" element={<Category />}/>
-                <Route path="/product" element={<Product />}/>
+                <Route path="/product/*" element={<Product />}/>
                 <Route path="/role" element={<Role />}/>
                 <Route path="/user" element={<User />}/>
                 <Route path="/charts/bar" element={<Bar />}/>

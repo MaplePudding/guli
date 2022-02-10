@@ -6,6 +6,7 @@ import (
 	"back/service/auth"
 	"back/service/category"
 	"back/service/login"
+	"back/service/product"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"time"
@@ -15,10 +16,13 @@ func registeRepository(){
 	db := repository.NewDb()
 	userRepo := new(repository.UserRepo)
 	categoryRepo := new(repository.CategoryRepo)
+	productRepo := new(repository.ProductRepo)
 	userRepo.Db = db
 	categoryRepo.Db = db
+	productRepo.Db = db
 	global.GUserRepo = userRepo
 	global.GCategoryRepo = categoryRepo
+	global.GProductRepo = productRepo
 }
 
 func main(){
@@ -50,6 +54,8 @@ func main(){
 		authGroup.GET("/manage/category/list", category.RCategoriesHandler)
 		authGroup.POST("/manage/category/add", category.RAddCategoryHandler)
 		authGroup.POST("/manage/category/update", category.RUpdateCategoryHandler)
+		authGroup.GET("/manage/product/list", product.RProductListHandler)
+		authGroup.GET("/manage/product/search", product.RProductListConditionHandler)
 	}
 
 	app.Run(":8080")
